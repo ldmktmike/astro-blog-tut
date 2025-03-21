@@ -13,10 +13,10 @@ const identity = {
 const skills = ["Brewing", "Kegging ", "Patience", "Sanitizing", "Recipes", "Documentation"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
-const skillColor = "navy";
+const skillColor = "FireBrick";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
@@ -49,11 +49,7 @@ const textCase = "uppercase";
   {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 </BaseLayout>
 
-<style is:global define:vars={{skillColor, fontWeight, textCase}}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
+<style is:global define:vars={{skillColor, fontWeight, textCase}}> 
   .skill {
     color: var(--skillColor);
     font-weight: var(--fontWeight);
