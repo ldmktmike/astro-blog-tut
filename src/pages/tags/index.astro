@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-// grab the data from all your Markdown files in one line of code using import.meta.glob()
-const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+const allPosts = await getCollection("blog");
 
 // return a list of unique tags
-const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+const tags = [...new Set(allPosts.map((post: any) => post.data.tags).flat())];
 
 const pageTitle = "Tag Index";
 ---
@@ -16,24 +16,4 @@ const pageTitle = "Tag Index";
       ))}
     </div>
   </BaseLayout>
-  <style>
-    a {
-      color: #00539F;
-    }
-  
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 1rem 0;
-    }
-  
-    .tag {
-      margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: .5em;
-      padding: .5em 1em;
-      font-size: 1.15em;
-      background-color: #F8FCFD;
-    }
-  </style>
 

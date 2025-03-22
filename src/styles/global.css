@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   /* --NavBgClr: DarkOrchid; */
   --NavBgClr: DarkOrchid;
@@ -5,7 +7,7 @@
 
 html {
   background-color: Lavender;
-  font-family: sans-serif;
+  font-family: "Montserrat", Roboto, Arial, sans-serif;
 }
 
 body {
@@ -20,6 +22,26 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
 a,
 a:visited {
   color: DodgerBlue;
@@ -27,6 +49,44 @@ a:visited {
 
 main {
   margin: 2rem 0 4rem;
+}
+
+main p {
+  font-size: 1.25rem;
+}
+
+main ul {
+  font-size: 1.25rem;
+  list-style-type: disclosure-closed;
+  padding-inline-start: 1.5rem;
+}
+
+main ul li {
+  padding-bottom: 1rem;
+}
+
+.postDateAuthor {
+  font-size: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  gap: 0.2rem;
+}
+
+.tag {
+  margin: 0.25em;
+  border: dotted 1px #a1a1a1;
+  border-radius: 0.5em;
+  padding: 0.4em 0.8em;
+  font-size: 1.1em;
+  background-color: #f8fcfd;
+}
+
+.tag a {
+  color: Navy;
 }
 
 footer {
@@ -55,6 +115,14 @@ h1 {
   background-color: DarkSlateBlue;
   border-color: MediumPurple;
   color: Thistle;
+}
+
+.blogPostHR {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: #4c1d95;
+  height: 4px;
+  border: none;
 }
 
 /* dark styles */
